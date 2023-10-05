@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
+:root {
+  --primary-color: rgb(240, 237, 237);
+  --font2-color: rgb(80, 76, 76) ;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  padding: 1em 1em;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .container .logo-container {
+  display: flex;
+}
+.navbar .container .logo-container .logo {
+  width: 50px;
+  margin-right: 0;
+}
+.navbar .container .logo-container .logo a {
+  cursor: pointer;
+}
+.navbar .container nav {
+  display: none;
+}
+.navbar .container nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar .container nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+.navbar .container nav ul li a {
+  text-decoration: none;
+}
+
+.mobile-menu {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+hr {
+  background-color: var(--primary-color);
+  height: 4px;
+  border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  /* Position the "next button" to the right */
+}
+.slideshow-container .mySlides {
+  display: none;
+}
+.slideshow-container .mySlides .numbertext {
+  color: var(--primary-color);
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+}
+.slideshow-container .mySlides .text {
+  color: var(--primary-color);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+}
+.slideshow-container .mySlides .fade {
+  animation-name: fade;
+}
+.slideshow-container .mySlides .cta {
+  background: var(--primary-color);
+  color: black;
+  text-decoration: none;
+  padding: 0.6em 1.3em;
+  font-size: 1.4em;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  padding: 8px 12px;
+  top: 40%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+  font-weight: 500;
+  width: 50%;
+  text-align: left;
+  cursor: pointer;
+}
+.slideshow-container .prev, .slideshow-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: var(--primary-color);
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.slideshow-container .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.slideshow-container .square span {
+  cursor: pointer;
+  height: 5px;
+  width: 60px;
+  margin: 0;
+  background-color: var(--primary-color);
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.current-topic {
+  padding: 2em 2em 2em 1em;
+}
+.current-topic .more-info-cta {
+  background: rgb(123, 121, 121);
+  color: white;
+  padding: 0.6em 1.3em;
+  font-size: 1.4em;
+  display: inline-block;
+  font-weight: bold;
+  width: 80%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.footer-links .first-column {
+  padding: 3em 1em;
+}
+.footer-links .first-column li {
+  color: var(--font2-color);
+  padding-bottom: 0.75em;
+}
+.footer-links .second-column {
+  padding: 0em 1em 3em 1em;
+}
+.footer-links .second-column li {
+  color: var(--font2-color);
+  padding-bottom: 0.75em;
+}
+.footer-links .third-column {
+  padding: 0em 1em 3em 1em;
+}
+.footer-links .third-column li {
+  color: var(--font2-color);
+  padding-bottom: 0.75em;
+}
+.footer-links .socialmedia-column {
+  display: flex;
+  padding: 0em 1em 3em 1em;
+  justify-content: flex-start;
+}
+.footer-links .socialmedia-column img {
+  margin-right: 2em;
+}
+
+.bottom-navbar {
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 1em;
+}
+.bottom-navbar .nav-container {
+  padding: 1em 0.3em;
+}
+.bottom-navbar .nav-container li {
+  padding: 0.5em;
+}
+.bottom-navbar .nav-container li a {
+  color: var(--font2-color);
+}/*# sourceMappingURL=style.css.map */
