@@ -17,23 +17,25 @@
                 <img class="logo" src="image/Logo_Rolls-Royce.svg" alt="rolls royce logo">
             </div>
 
+            <p>Menu</p>
             <img id="mobile-cta" class="mobile-menu" src="image/ham.svg" alt="Open Navigation">
-
+            <!--<img id="mobile-exit" class="exit-menu" src="image/exit.svg" alt="close navigation">-->
             <nav>
-                <ul class="show-desktop hide-mobile" id="subnav">
-                    <li><p>Menu</p></li>
+                <ul class="language" id="language">
+                    <li><a href="#">EN</a></li>
+                    <li><a href="#">DE</a></li>
+                </ul>
+                <img src="image/icons8-search-30.svg" alt="serach icon">
+
+                <ul class="subnav" id="subnav">
+                    
                     <li><a href="#">New Site</a></li>
                     <li><a href="#">Dates</a></li>
                     <li><a href="#">Downloads</a></li>
                 </ul>
-    
-                <ul class="show-desktop hide-mobile" id="language">
-                    <li><a href="#">EN</a></li>
-                    <li><a href="#">DE</a></li>
-                </ul>
                      
-                <ul class="hide-desktop hide-mobile" id="nav"> 
-                    <img id="mobile-exit" class="mobile-menu-exit" src="image/exit.svg" alt="close navigation"> 
+                <ul class="navlist" id="navlist"> 
+                     
                     <li><a href="#">Company</a></li>
                     <li><a href="#">Sustainability</a></li>
                     <li><a href="#">Innovation</a></li>
@@ -78,14 +80,12 @@
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     
         <!-- The squares -->
-        <div class="square" style="text-align:center">
+        <div class="square-hide-mobile" style="text-align:center">
         <span class="square" onclick="currentSlide(1)"></span>
         <span class="square" onclick="currentSlide(2)"></span>
         <span class="square" onclick="currentSlide(3)"></span>
-    </div>
-    <br>
- 
-
+        </div>
+        <br>
     </div>
 
     <div class="content">
@@ -236,7 +236,7 @@
                 </li>
             </ul>
 
-            <a href="#" class="more-info-cta">READ MORE!<span>&gt;</span></a>
+            <a href="#" class="more-info-cta">READ MORE<span>&gt;</span></a>
         </section>
             
     </div>
