@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
 :root {
   --primary-color: rgb(240, 237, 237);
-  --font2-color: rgb(80, 76, 76) ;
+  --font2-color: rgb(80, 76, 76);
 }
 
 body {
@@ -29,17 +29,40 @@ body {
 .navbar .container p {
   display: none;
 }
-.navbar .container img {
-  display: block;
+.navbar .container .mobile-menu {
+  display: inline-block;
+  cursor: pointer;
+}
+.navbar .container .mobile-menu .bar1, .navbar .container .mobile-menu .bar2, .navbar .container .mobile-menu .bar3 {
+  width: 18px;
+  height: 0.2px;
+  background-color: #333;
+  margin: 6px 10px 6px 10px;
+  transition: 0.4s;
+}
+.navbar .container .mobile-menu.change {
+  /* Fade out the second bar */
+  /* Rotate last bar */
+}
+.navbar .container .mobile-menu.change .bar1 {
+  transform: translate(0, 6.5px) rotate(-45deg);
+}
+.navbar .container .mobile-menu.change .bar2 {
+  opacity: 0;
+}
+.navbar .container .mobile-menu.change .bar3 {
+  transform: translate(0, -6.5px) rotate(45deg);
 }
 .navbar .container nav {
-  position: fixed;
+  position: absolute;
   height: 100vh;
   width: 100vw;
   z-index: 999;
   left: 0;
   top: 3.85em;
   background-color: var(--primary-color);
+  transition: 0.5s;
+  right: -100%;
 }
 .navbar .container nav a img {
   top: 0;
@@ -55,30 +78,89 @@ body {
   display: inline-block;
   padding-right: 0.5em;
 }
+.navbar .container nav .language li a {
+  border: 2px solid transparent;
+}
+.navbar .container nav .language li a:hover {
+  color: var(--font2-color);
+}
+.navbar .container nav .language li a:active {
+  border-color: rgb(28, 2, 89);
+  box-sizing: border-box;
+}
 .navbar .container nav img {
   display: inline-block;
   width: 5%;
   vertical-align: middle;
   margin-right: 1em;
+  border: 2px solid transparent;
+}
+.navbar .container nav img:hover {
+  font-weight: bold;
+}
+.navbar .container nav img:active {
+  border-color: rgb(28, 2, 89);
+  box-sizing: border-box;
 }
 .navbar .container nav .subnav {
   display: block;
   padding-bottom: 3em;
   line-height: 2.5;
-  padding-left: 1em;
   font-weight: bold;
+}
+.navbar .container nav .subnav li a {
+  border: 2px solid transparent;
+  display: block;
+  padding-left: 1em;
+  margin-right: 1em;
+}
+.navbar .container nav .subnav li a:hover {
+  color: var(--font2-color);
+}
+.navbar .container nav .subnav li a:active {
+  border-color: rgb(28, 2, 89);
+  box-sizing: border-box;
 }
 .navbar .container nav .navlist {
   padding-left: 1em;
-  line-height: 2.5;
+  line-height: 2em;
+  display: contents;
+}
+.navbar .container nav .navlist li {
+  padding-left: 1em;
+}
+.navbar .container nav .navlist li .btn {
+  border: none;
+  line-height: inherit;
+}
+.navbar .container nav .navlist li .btn:hover {
+  color: var(--font2-color);
+  cursor: pointer;
+}
+.navbar .container nav .navlist li .btn-sm {
+  font-size: 100%;
+}
+.navbar .container nav .navlist li .float-right {
+  float: right;
+  padding-right: 1em;
+}
+.navbar .container nav .navlist li a {
+  border: 2px solid transparent;
+}
+.navbar .container nav .navlist li a:hover {
+  font-weight: bold;
+}
+.navbar .container nav .navlist li a:active {
+  border-color: rgb(28, 2, 89);
+  box-sizing: border-box;
 }
 .navbar .container nav ul {
   list-style: none;
   margin: 0;
 }
 
-.mobile-menu {
-  cursor: pointer;
+.hide-mobile {
+  display: none;
 }
 
 ul {
@@ -125,43 +207,55 @@ hr {
 }
 .slideshow-container .mySlides .text {
   color: var(--primary-color);
-  font-size: 1.4em;
+  font-size: 1.2em;
   position: absolute;
   top: 10%;
   left: 14%;
   transform: translate(-10%, -10%);
-  font-weight: 600;
-  width: 100%;
+  font-weight: 500;
+  width: 80%;
   text-align: left;
-  line-height: 1.2;
-  padding: 0em 2em 2em 0.5em;
-}
-.slideshow-container .mySlides .fade {
-  animation-name: fade;
+  line-height: 1.1;
+  padding: 0em 2em 2em 1em;
 }
 .slideshow-container .mySlides .cta {
   background: var(--primary-color);
   color: black;
   text-decoration: none;
-  padding: 2em 0em 2em 2em;
-  font-size: 1em;
-  display: inline-block;
+  font-size: 0.75em;
   position: absolute;
   z-index: 1;
-  padding: 8px 12px;
+  padding: 1.5em 1em 1.5em 3em;
   top: 30%;
   left: 13%;
-  transform: translate(-10%, -10%);
+  transform: translate(-13%, -13%);
   font-weight: 600;
-  width: 55%;
+  width: 59%;
   text-align: left;
   cursor: pointer;
-  white-space: nowrap;
+  border-radius: 0.3em;
+  margin-left: 1em;
 }
 .slideshow-container .mySlides .cta span {
-  margin-left: 5em;
-  font-size: large;
-  line-height: 1;
+  float: right;
+  font-size: xx-large;
+  line-height: 0.7;
+  color: var(--font2-color);
+  font-weight: 200;
+  line-height: 0.5em;
+  margin-right: 0.1em;
+}
+.slideshow-container .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .slideshow-container .prev, .slideshow-container .next {
   cursor: pointer;
@@ -178,6 +272,18 @@ hr {
           user-select: none;
   font-size: 1.6em;
   font-weight: 300;
+}
+.slideshow-container .play-btn {
+  border: transparent;
+  background-color: transparent;
+  position: absolute;
+  top: 87%;
+  right: 0;
+  font-size: xx-large;
+  margin: 0;
+}
+.slideshow-container .play-btn .play-icon {
+  color: var(--font2-color); /* Set the icon color to white */
 }
 .slideshow-container .next {
   right: 35%;
@@ -209,7 +315,7 @@ hr {
 }
 .inspriation-topics h1 {
   margin: 0;
-  padding: 0em 1em;
+  padding: 1em 1.5em 0em 1.5em;
   color: var(--font2-color);
 }
 .inspriation-topics ul {
@@ -217,7 +323,7 @@ hr {
 }
 .inspriation-topics ul li {
   margin: 0;
-  padding: 2em 1em 0em 1em;
+  padding: 2em 1em 0em 1.5em;
 }
 .inspriation-topics ul li a .image-with-quote {
   margin: 0;
@@ -226,21 +332,25 @@ hr {
 .inspriation-topics ul li a .image-with-quote img {
   display: block; /* Ensure the image is a block element */
   width: 100%;
+  border-bottom: 5px solid rgb(227, 108, 17);
+}
+.inspriation-topics ul li a .image-with-quote .second-img {
+  border-bottom: 5px solid var(--font2-color);
 }
 .inspriation-topics ul li a .image-with-quote blockquote {
   position: absolute; /* Position the blockquote absolutely within the figure */
   top: 0; /* Adjust the position as needed, e.g., 'top: 0;' to place it at the top */
   left: 0; /* Adjust the position as needed, e.g., 'right: 0;' to place it on the right */
-  padding: 10px; /* Add padding for spacing */
-  margin: 0.5em; /* Remove default margin */
+  margin: 1em; /* Remove default margin */
   color: white;
-  font-weight: bold;
+  font-weight: 500;
   font-size: large;
+  width: 90%;
 }
 
 .current-topic h1 {
   margin: 0;
-  padding: 0em 1em;
+  padding: 0em 1.5em;
   color: var(--font2-color);
 }
 .current-topic ul {
@@ -253,6 +363,7 @@ hr {
 .current-topic ul li a .image-with-quote-figcaption {
   margin: 0;
   position: relative;
+  margin-left: 0.5em;
 }
 .current-topic ul li a .image-with-quote-figcaption img {
   width: 100%;
@@ -282,40 +393,39 @@ hr {
 .current-topic .more-info-cta {
   background: rgb(123, 121, 121);
   color: white;
-  padding: 1em 0em 1em 1.5em;
+  padding: 1em 1em 1em 2em;
   font-size: 0.9em;
   display: inline-block;
   font-weight: bold;
-  width: unset;
-  display: flex;
+  width: 60%;
   cursor: pointer;
-  margin: 2em;
-  align-items: center;
-  white-space: nowrap; /* Prevent text from wrapping to a new line */
+  margin: 4em 2em 4em 2.5em;
+  border-radius: 0.2em;
 }
 .current-topic .more-info-cta span {
-  margin-left: 10em;
-  font-size: large;
-  line-height: 1;
-  display: inline-block;
+  float: right;
+  font-size: xx-large;
+  line-height: 0.5em;
+  font-weight: normal;
+  margin-right: 0.2em;
 }
 
 .footer-links .first-column {
-  padding: 3em 1.5em;
+  padding: 3em 2em;
 }
 .footer-links .first-column li {
   color: var(--font2-color);
   padding-bottom: 0.75em;
 }
 .footer-links .second-column {
-  padding: 0em 1em 3em 1.5em;
+  padding: 0em 1em 3em 2em;
 }
 .footer-links .second-column li {
   color: var(--font2-color);
   padding-bottom: 0.75em;
 }
 .footer-links .third-column {
-  padding: 0em 1em 3em 1.5em;
+  padding: 0em 1em 3em 2em;
 }
 .footer-links .third-column li {
   color: var(--font2-color);
@@ -323,7 +433,7 @@ hr {
 }
 .footer-links .socialmedia-column {
   display: flex;
-  padding: 0em 1em 3em 1.5em;
+  padding: 0em 1em 3em 2em;
   justify-content: flex-start;
 }
 .footer-links .socialmedia-column img {
@@ -343,4 +453,32 @@ hr {
 }
 .bottom-navbar .nav-container li a {
   color: var(--font2-color);
+  border: 2px solid transparent;
+  display: block;
+}
+.bottom-navbar .nav-container li a:active {
+  border-color: rgb(28, 2, 89);
+  box-sizing: border-box;
+}
+
+/*resposive design*/
+@media only screen and (min-width: 481px) {
+  .navbar .container .logo-container {
+    padding-left: 1.5em;
+  }
+  .navbar .container .logo-container .logo {
+    overflow: hidden;
+  }
+  .navbar .container .logo-container a img {
+    padding-top: 1em;
+  }
+  .navbar .container p {
+    display: block;
+    margin-left: 8em;
+    font-weight: 800;
+    padding: 0 0 0.5em 1em;
+  }
+  .navbar .container .mobile-menu {
+    padding-top: 0.7em;
+  }
 }/*# sourceMappingURL=style.css.map */
