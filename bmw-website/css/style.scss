@@ -20,8 +20,8 @@ body {
         .logo-container {
             display: flex; // Display logos in a row
             .logo {
-                width: 50px;
                 margin-right: 0; // Adjust margin between logos as needed
+                width: 50%;
                 a {
                     cursor: pointer;
                 }
@@ -226,6 +226,8 @@ hr {
 .slideshow-container {
     position: relative;
     margin: auto;
+    width: 100%;
+    
 
     .mySlides {
         display: none;
@@ -578,7 +580,477 @@ hr {
         }
 
     }
+    .slideshow-container {
+        .mySlides {
+            max-height: 350px;
+            padding-bottom: .5em;
+            img {
+                width: 100%;
+                height: 150px;
+                
+            }
+
+            .cta {
+                top: 48%;
+                width: 50%;
+                margin-left: 4em;
+                left: 6%;
+            }
+    
+            .numbertext{
+                display: none;
+            }
+        }
+        .next {
+            right: 4%;
+            transform: translateX(50%);
+            border-radius: 1px 0 0 1px;
+            left: auto;
+            top: 35%;
+            font-size: xx-large;
+            color: var(--primary-color);
+            
+        }
+        .prev {
+            left: -11px;
+            transform: translateX(5%);
+            border-radius: 1px 0 0 1px;
+            right: auto;
+            top: 35%;
+            font-size: xx-large;
+            color: var(--primary-color);
+    
+        }
+        .play-btn {
+            top: 77%;
+        }
+        .square-hide-mobile {
+            display: block;
+            padding-top: 0;
+
+        }
+    }
+    .content {
+        .inspriation-topics {
+            padding-bottom: 0;
+    
+            h1 {
+                padding-left: 1.5em;
+                font-size: larger;
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 1em .5em 0em 1em;
+                li {
+                    width: 45%;
+                    padding: 1em .5em 3em .5em;
+                    a {
+                        .image-with-quote {
+                            margin: 0;
+                            
+                        }
+
+                    }
+
+                }
+            }
+
+        }
+
+        .current-topic {
+            h1 {
+                font-size: larger;
+                padding-left: 1.5em;
+                padding-bottom: 1.5em;
+            }
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 1em .5em 0em 1em;
+                
+                li {
+                    width: 46%;
+                    padding: 0em 0.4em 0em 0em;
+                    a {
+                        .image-with-quote-figcaption {
+                            figcaption {
+                                font-size: medium;
+                                padding-right: .5em;
+                                img {
+                                    width: 7%;
+                                }
+                            }
+                            h1 {
+                                width: 100%;
+                                font-size: large;
+
+                            }
+                            blockquote {
+                                padding-bottom: 3em;
+                            }
+
+                        }
+                    }
+                }
+
+            }
+            .more-info-cta {
+                width: 48%;
+                margin-left: 1.5em;
+            }
+        }
+    }
+    footer {
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            .first-column {
+                padding: 3em .5em 3em 1.5em;
+                width: 45%;
+            }
+            .second-column {
+                padding: 3em .5em 3em 1.5em;
+
+            }
+            .third-column {
+                padding: 0em .5em 3em 1.5em;
+                width: 50%;
+
+            }
+            .socialmedia-column {
+                padding: 0em 0em 0em 1.5em;
+                display: contents;
+                li {
+                    a {
+                        img {
+                            margin-right: 1.1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
+@media only screen and (min-width: 1281px) {
+    .footer-hr {
+        height: 1px;
+
+    }
+    .navbar {
+        .container {
+            display: flex;
+            .logo-container {
+                padding-left: 1.5em;
+                .logo {
+                    width: 60%;
+                }    
+                a {
+                    img {
+                        padding-top: 1em;
+                        width:100%;
+                    }
+                }
+            }
+            p {
+              margin-left: 55em;
+              font-weight: 500;
+              padding: 0 0 .5em 1em;
+              
+               
+            }
+            .mobile-menu {
+                padding-top: .7em;
+            }
+    
+        }
+
+    }
+    .slideshow-container {
+        height: 520px;
+        padding-bottom: 4em;
+        .mySlides {
+            max-height: 350px;
+            
+            img {
+                width: 100%;
+                height: 520px;
+                
+            }
+            .text {
+                font-size: x-large;
+                font-weight: bold;
+            }
+
+            .cta {
+                top: 20%;
+                width: 20%;
+                margin-left: 4em;
+                left: 6%;
+            }
+    
+            .numbertext{
+                display: none;
+            }
+        }
+        .prev, .next {
+
+            padding: 16px;
+            margin-top: -22px;
+            color: var(--primary-color);
+            font-size: 3em;
+            
+        }
+
+        .play-btn {
+            top: 90%;
+        }
+        .square-hide-mobile {
+            display: block;
+            padding-top: 10em;
+            span {
+                height: 3px;
+                width: 80px;
+            }
+            
+
+        }
+    }
+    .content {
+        .inspriation-topics {
+            padding-bottom: 0;
+    
+            h1 {
+                padding-left: 2em;
+                font-size: xx-large;
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                padding-top: 1em;
+                
+                li {
+                    width: 28%;
+                    padding-right: 0.85em;
+                    a {
+                        .image-with-quote {
+                            margin: 0;
+                            blockquote {
+                                font-size: xx-large;
+                            }
+                            
+                        }
+
+                    }
+                }
+                li:first-child {
+                    padding-left: 3.5em;
+                }
+            }
+
+        }
+
+        .current-topic {
+            h1 {
+                font-size: xx-large;
+                padding-left: 2em;
+                padding-bottom: 1em;
+            }
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 1em .5em 0em 3.5em;
+                
+                li {
+                    width: 28%;
+                    padding: 0em 0.4em 0em .5em;
+                    a {
+                        .image-with-quote-figcaption {
+                            figcaption {
+                                font-size: medium;
+                                padding-right: .5em;
+                                padding-top: 1em;
+                                width: 100%;
+                                img {
+                                    width: 4%;
+                                }
+                            }
+                            h1 {
+                                width: 100%;
+                                font-size: x-large;
+
+                            }
+                            blockquote {
+                                padding-bottom: 3em;
+                                font-size: .87em;
+                                font-weight: 700;
+                            }
+
+                        }
+                    }
+
+
+                    &:first-child {
+                        width:68%;
+                        padding-right: 2em;
+                        a {
+                            .image-with-quote-figcaption { 
+                                display: flex;
+                                padding-bottom: 3em;
+                                img {
+                                    width: 84%;
+                                }  
+                                .caption {
+                                    padding-left: 1em;
+                                    top: 100px;
+                                    left: 8px;
+                                    position: relative;    
+                                    figcaption {
+                                        font-size: medium;
+                                        padding-top: 1.8em;
+                                        width: 243%;
+                                        img {
+                                            width:5%;
+                                        }
+                                    }
+
+                                    h1 {
+                                        width: 218%;
+                                    }
+
+                                    blockquote {
+                                        width: 286%;
+                                        font-size: .87em;
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                    
+                    &:nth-child(5){
+                        width:68%;
+                        padding-right: 2em;
+                        a {
+                            .image-with-quote-figcaption { 
+                                display: flex;
+                                padding-bottom: 3em; 
+                                
+                                img {
+                                    width: 84%;
+                                    //padding-left: 2em;
+                                    
+                                }  
+                                .caption {
+                                    padding-left: 1em;
+                                    top: 78px;
+                                    left: 8px;
+                                    position: relative;    
+                                    figcaption {
+                                        font-size: medium;
+                                        padding-top: 1.8em;
+                                        width: 218%;
+                                        img {
+                                            width:5%;
+                                        }
+                                    }
+
+                                    h1 {
+                                        width: 218%;
+                                    }
+
+                                    blockquote {
+                                        width: 218%;
+                                        font-size: .87em;
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                        }
+                    }    
+                }
+
+
+            }
+            .more-info-cta {
+                width: 24%;
+                margin-left: 3em;
+                font-weight: 600;
+                font-size: large;
+                //span {
+
+                //}
+            }
+        }
+    }
+    footer {
+        .footer-links {
+            .first-column {
+                padding: 3em 0em 3em 4.5em;
+                width: 20%;
+                font-size: medium;
+            }
+            .second-column {
+                padding: 3em 0em 3em 0em;
+                font-size: medium;
+                width: 20%;
+
+            }
+            .third-column {
+                padding: 3em 0em 3em 0em;
+                width: 20%;
+                font-size: medium;
+
+            }
+            .socialmedia-column {
+                padding: 3em 0em 0em 0em;
+                display: flex;
+                margin-left: 3em;
+                width: 20%;
+                li {
+                    a {
+                        img {
+                            margin-right: 2em;
+                            width: 40%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom-navbar {
+        width: 100%;
+        padding: 0;
+        .nav-container {
+            padding-top: .2em;
+            padding-bottom: .2em;
+            padding-left: 3em;
+            nav {
+                ul {
+                    display: flex;
+                    padding-left: 1em;
+                    li:first-child {
+                        margin-left: 0em;    
+
+                    }
+                    li {
+                        font-size: medium;
+                        margin-left: 2.5em;
+                        font-weight: 550;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 
 
 
