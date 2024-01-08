@@ -53,7 +53,7 @@ body {
 .navbar .container .mobile-menu.change .bar3 {
   transform: translate(0, -6.5px) rotate(45deg);
 }
-.navbar .container nav {
+.navbar .container .hide-mobile {
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -64,97 +64,97 @@ body {
   transition: 0.5s;
   right: -100%;
 }
-.navbar .container nav a img {
+.navbar .container .hide-mobile a img {
   top: 0;
   right: 0;
   width: 10%;
 }
-.navbar .container nav .language {
+.navbar .container .hide-mobile .language {
   display: inline-block;
   padding: 3em 0 1em 17em;
   font-weight: bold;
 }
-.navbar .container nav .language li {
+.navbar .container .hide-mobile .language li {
   display: inline-block;
   padding-right: 0.5em;
 }
-.navbar .container nav .language li a {
+.navbar .container .hide-mobile .language li a {
   border: 2px solid transparent;
 }
-.navbar .container nav .language li a:hover {
+.navbar .container .hide-mobile .language li a:hover {
   color: var(--font2-color);
 }
-.navbar .container nav .language li a:active {
+.navbar .container .hide-mobile .language li a:active {
   border-color: rgb(28, 2, 89);
   box-sizing: border-box;
 }
-.navbar .container nav img {
+.navbar .container .hide-mobile img {
   display: inline-block;
   width: 5%;
   vertical-align: middle;
   margin-right: 1em;
   border: 2px solid transparent;
 }
-.navbar .container nav img:hover {
+.navbar .container .hide-mobile img:hover {
   font-weight: bold;
 }
-.navbar .container nav img:active {
+.navbar .container .hide-mobile img:active {
   border-color: rgb(28, 2, 89);
   box-sizing: border-box;
 }
-.navbar .container nav .subnav {
+.navbar .container .hide-mobile .subnav {
   display: block;
   padding-bottom: 3em;
   line-height: 2.5;
   font-weight: bold;
 }
-.navbar .container nav .subnav li a {
+.navbar .container .hide-mobile .subnav li a {
   border: 2px solid transparent;
   display: block;
   padding-left: 1em;
   margin-right: 1em;
 }
-.navbar .container nav .subnav li a:hover {
+.navbar .container .hide-mobile .subnav li a:hover {
   color: var(--font2-color);
 }
-.navbar .container nav .subnav li a:active {
+.navbar .container .hide-mobile .subnav li a:active {
   border-color: rgb(28, 2, 89);
   box-sizing: border-box;
 }
-.navbar .container nav .navlist {
+.navbar .container .hide-mobile .navlist {
   padding-left: 1em;
   line-height: 2em;
   display: contents;
 }
-.navbar .container nav .navlist li {
+.navbar .container .hide-mobile .navlist li {
   padding-left: 1em;
 }
-.navbar .container nav .navlist li .btn {
+.navbar .container .hide-mobile .navlist li .btn {
   border: none;
   line-height: inherit;
 }
-.navbar .container nav .navlist li .btn:hover {
+.navbar .container .hide-mobile .navlist li .btn:hover {
   color: var(--font2-color);
   cursor: pointer;
 }
-.navbar .container nav .navlist li .btn-sm {
+.navbar .container .hide-mobile .navlist li .btn-sm {
   font-size: 100%;
 }
-.navbar .container nav .navlist li .float-right {
+.navbar .container .hide-mobile .navlist li .float-right {
   float: right;
   padding-right: 1em;
 }
-.navbar .container nav .navlist li a {
+.navbar .container .hide-mobile .navlist li a {
   border: 2px solid transparent;
 }
-.navbar .container nav .navlist li a:hover {
+.navbar .container .hide-mobile .navlist li a:hover {
   font-weight: bold;
 }
-.navbar .container nav .navlist li a:active {
+.navbar .container .hide-mobile .navlist li a:active {
   border-color: rgb(28, 2, 89);
   box-sizing: border-box;
 }
-.navbar .container nav ul {
+.navbar .container .hide-mobile ul {
   list-style: none;
   margin: 0;
 }
@@ -602,26 +602,32 @@ hr {
   .footer-hr {
     height: 1px;
   }
-  .navbar .container {
-    display: flex;
-  }
   .navbar .container .logo-container {
-    padding-left: 1.5em;
+    padding-left: 4em;
   }
   .navbar .container .logo-container .logo {
-    width: 60%;
-  }
-  .navbar .container .logo-container a img {
-    padding-top: 1em;
-    width: 100%;
+    width: 70px;
+    height: auto;
   }
   .navbar .container p {
-    margin-left: 55em;
+    margin-left: 43em;
     font-weight: 500;
     padding: 0 0 0.5em 1em;
   }
-  .navbar .container .mobile-menu {
-    padding-top: 0.7em;
+  .navbar .container .hide-mobile {
+    display: none;
+  }
+  .navbar .container .show-desktop {
+    display: block;
+  }
+  .navbar .container nav .subnav {
+    display: flex;
+    position: relative;
+    top: -130px;
+    left: 722px;
+  }
+  .navbar .container nav .navlist {
+    display: none;
   }
   .slideshow-container {
     height: 520px;

@@ -60,7 +60,7 @@ body {
             }
 
         }
-        nav {
+        .hide-mobile {
             position: absolute;
             height:100vh;
             width: 100vw;
@@ -741,28 +741,44 @@ hr {
     }
     .navbar {
         .container {
-            display: flex;
             .logo-container {
-                padding-left: 1.5em;
+                padding-left: 4em;
                 .logo {
-                    width: 60%;
+                    width: 70px;
+                    height: auto;
+                    
                 }    
-                a {
-                    img {
-                        padding-top: 1em;
-                        width:100%;
-                    }
-                }
+
             }
             p {
-              margin-left: 55em;
+              margin-left: 43em;
               font-weight: 500;
               padding: 0 0 .5em 1em;
               
                
             }
-            .mobile-menu {
-                padding-top: .7em;
+
+            .hide-mobile {
+                display: none;
+            }
+
+            .show-desktop { 
+                display: block;  
+
+            }
+
+            nav {
+                
+                .subnav {
+                    display: flex;
+                    position: relative;
+                    top: -130px;
+                    left: 722px;
+                    
+                }
+                .navlist {
+                    display: none;
+                }
             }
     
         }
